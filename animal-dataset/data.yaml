@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 14
+names: ['0', '1', '2', '3', '4', '5', '6', '7', 'cat', 'dog', 'dolphin', 'elephant', 'giraffe', 'horse']
+
+roboflow:
+  workspace: faculty-of-computers-and-artficial-intelligence-cairo-university
+  project: animals-yolov5-7hmjj
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/faculty-of-computers-and-artficial-intelligence-cairo-university/animals-yolov5-7hmjj/dataset/2
