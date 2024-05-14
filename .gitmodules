@@ -1,0 +1,3 @@
+[submodule "simulation/simulation/pymycobot"]
+	path = simulation/simulation/pymycobot
+	url = https://github.com/elephantrobotics/pymycobot.git
