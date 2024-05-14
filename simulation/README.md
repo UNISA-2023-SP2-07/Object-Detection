@@ -7,3 +7,5 @@
 -What does rospack find tb_tables output? [rospack] Error: stack/package tb_tables not found
 
 After using source /home/gabriel/catkin_ws/devel/setup.bash I can find it with rospack find.
+
+https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world
