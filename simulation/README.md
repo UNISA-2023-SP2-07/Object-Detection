@@ -2,6 +2,7 @@
 1. Start roslaunch for gazebo editor: roslaunch gazebo_sim lab_l.launch
 2. Start gazebo gui:
    cd ~/worlds/
+
    ign gazebo RAH_lab.sdf -v 4
    
 * Debug package not found:
@@ -15,3 +16,7 @@
 After using **source ~/Object-Detection/simulation/catkin_ws/devel/setup.bash** I can find it with rospack find.
 
 https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world
+
+Tool installment
+sudo apt install ros-noetic-gazebo-ros-pkgs
+sudo apt install ros-noetic-ros-core ros-noetic-geometry2
