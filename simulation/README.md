@@ -1,9 +1,12 @@
 * Start the simulation:
 1. Start roslaunch for gazebo editor: roslaunch gazebo_sim lab_l.launch
 2. Start gazebo gui:
+   
    cd ~/worlds/
 
-   ign gazebo RAH_lab.sdf -v 4
+   ign gazebo RAH_lab_world.sdf -v 4
+
+   Open new terminal: ign topic -e -t /world/RAH_lab/stats
    
 * Debug package not found:
 
