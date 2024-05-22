@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.7">
+<sdf version="1.9">
     <world name="car_world">
         <physics name="1ms" type="ignored">
             <max_step_size>0.001</max_step_size>
@@ -130,7 +130,7 @@
 
             <include>
             <uri>
-            https://fuel.gazebosim.org/1.0/OpenRobotics/models/mp_400
+            https://fuel.gazebosim.org/1.0/OpenRobotics/models/X1 Config 5
             </uri>
             </include>
         </model>
