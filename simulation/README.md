@@ -20,6 +20,11 @@ After using **source ~/Object-Detection/simulation/catkin_ws/devel/setup.bash** 
 
 https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world
 
+Fix bug for not having public key:
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
+
+
 Tool installment
 sudo apt install ros-noetic-gazebo-ros-pkgs
 sudo apt install ros-noetic-ros-core ros-noetic-geometry2
