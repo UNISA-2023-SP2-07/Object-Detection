@@ -2,13 +2,17 @@
     <arg name="x_pos" default="0.0"/>
     <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
+
+    <env name="GAZEBO_MODEL_PATH" value="$(find gazebo_sim)/models"/>
+    
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find gazebo_sim)/worlds/RAH_lab.world"/>
+        <arg name="world_name" value="$(find gazebo_sim)/worlds/lab_world.sdf"/>
         <arg name="paused" value="false"/>
         <arg name="use_sim_time" value="true"/>
         <arg name="gui" value="true"/>
         <arg name="headless" value="false"/>
         <arg name="debug" value="false"/>
+        <arg name="extra_gazebo_args" default='--verbose'/>
     </include>
 
 </launch>
