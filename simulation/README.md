@@ -4,9 +4,9 @@
    
    cd ~/worlds/
 
-   ign gazebo RAH_lab_world.sdf -v 4
+   ign gazebo world_with_obstacles.sdf -v 4
 
-   Open new terminal: ign topic -e -t /world/RAH_lab/stats
+   Open new terminal: ign topic -e -t /world/world_with_obstacles/stats
    
 * Debug package not found:
 
