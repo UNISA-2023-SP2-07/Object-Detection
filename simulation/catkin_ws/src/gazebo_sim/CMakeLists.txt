@@ -185,6 +185,7 @@ include_directories(
  install(FILES
    # myfile1
    lab_l.launch
+   lab_with_obs.launch
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
  )
 

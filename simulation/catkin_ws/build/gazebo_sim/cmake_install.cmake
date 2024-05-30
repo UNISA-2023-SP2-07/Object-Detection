@@ -53,6 +53,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_sim" TYPE FILE FILES "/home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/lab_l.launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_sim" TYPE FILE FILES
+    "/home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/lab_l.launch"
+    "/home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/lab_with_obs.launch"
+    )
 endif()
 

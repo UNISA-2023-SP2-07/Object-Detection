@@ -1442,5 +1442,10 @@
         <odom_publish_frequency>1</odom_publish_frequency>
         <topic>cmd_vel</topic>
     </plugin>
+
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/AMR</robotNamespace>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
   </model>
 </sdf>
