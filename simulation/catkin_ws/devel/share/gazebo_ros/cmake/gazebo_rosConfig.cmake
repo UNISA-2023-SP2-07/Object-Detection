@@ -67,7 +67,7 @@ set(gazebo_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(gazebo_ros_SOURCE_PREFIX /home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros)
+  set(gazebo_ros_SOURCE_PREFIX /home/truan/Object-Detection/simulation/catkin_ws/src/ws/gazebo_ros_pkgs/gazebo_ros)
   set(gazebo_ros_DEVEL_PREFIX /home/truan/Object-Detection/simulation/catkin_ws/devel)
   set(gazebo_ros_INSTALL_PREFIX "")
   set(gazebo_ros_PREFIX ${gazebo_ros_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/truan/Object-Detection/simulation/catkin_ws/devel/include;/usr/inc
         message(FATAL_ERROR "Project 'gazebo_ros' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'gazebo_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'gazebo_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/truan/Object-Detection/simulation/catkin_ws/src/ws/gazebo_ros_pkgs/gazebo_ros/${idir}'.  ${_report}")
     endif()
     _list_append_unique(gazebo_ros_INCLUDE_DIRS ${include})
   endforeach()

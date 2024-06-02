@@ -1,2 +1,2 @@
-gazebo_ros_pkgs/gazebo_dev:gazebo_ros_pkgs/gazebo_msgs:gazebo_ros_pkgs/gazebo_plugins:gazebo_ros_pkgs/gazebo_ros:gazebo_ros_pkgs/gazebo_ros_control:gazebo_ros_pkgs/gazebo_ros_pkgs:gazebo_sim
--DCATKIN_DEVEL_PREFIX=/home/truan/Object-Detection/simulation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/truan/Object-Detection/simulation/catkin_ws/install -G Unix Makefiles
+gazebo_sim:ws/gazebo_ros_pkgs/gazebo_dev:ws/gazebo_ros_pkgs/gazebo_msgs:ws/gazebo_ros_pkgs/gazebo_plugins:ws/gazebo_ros_pkgs/gazebo_ros
+-DCATKIN_DEVEL_PREFIX=/home/truan/Object-Detection/simulation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/truan/Object-Detection/simulation/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=gazebo_dev;gazebo_msgs;gazebo_plugins;gazebo_ros;gazebo_sim -G Unix Makefiles

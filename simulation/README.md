@@ -1,30 +1,41 @@
-* Start the simulation:
-1. Start roslaunch for gazebo editor: roslaunch gazebo_sim lab_l.launch
+# HOW TO RUN A SIMULATION WORKSPACE
+---
+## Source the package before running:
+*(Run on terminal before every launch)*
+
+`source /opt/ros/noetic/setup.bash`
+`source ~/Object-Detection/simulation/catkin_ws/devel/setup.bash`
+
+Source to the plugins lib 
+`source /usr/share/gazebo-11/setup.sh`
+
+
+Debug: test if rospack is exist in the workspace
+`rospack find gazebo_sim`
+
+## Start the simulation:
+1. Start roslaunch for gazebo editor: `roslaunch gazebo_sim lab_l.launch`
 2. Start gazebo gui:
    
-   cd ~/worlds/
+   `cd ~/worlds/`
+   `ign gazebo world_with_obstacles.sdf -v 4`
 
-   ign gazebo world_with_obstacles.sdf -v 4
-
-   Open new terminal: ign topic -e -t /world/world_with_obstacles/stats
+   Show stats of the simulation in new terminal: `ign topic -e -t /world/world_with_obstacles/stats`
    
-* Debug package not found:
+## Build single package
 
--Does the file actually exists? Yes, the file is in the launch folder.
+`catkin_make --only-pkg-with-deps gazebo_sim`
+`catkin_make -DCATKIN_WHITELIST_PACKAGES=""` to build all at the end
 
--Did you source the setup.bash file? Do you mean **source /opt/ros/noetic/setup.bash** ? Yes, I did.
+## DEBUGGING
+No public key for`W:GPG error: http://packages.ros.org/ros2/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY `:
 
--What does **rospack find gazebo_sim** output? [rospack] Error: stack/package tb_tables not found
-
-After using **source ~/Object-Detection/simulation/catkin_ws/devel/setup.bash** I can find it with rospack find.
-
-https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world
-
-Fix bug for not having public key:
-
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
-
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654`
 
 Tool installment
-sudo apt install ros-noetic-gazebo-ros-pkgs
-sudo apt install ros-noetic-ros-core ros-noetic-geometry2
+
+`sudo apt install ros-noetic-gazebo-ros-pkgs`
+`sudo apt install ros-noetic-ros-core ros-noetic-geometry2`
+
+## RESOURCES
+[Create world in Gazebo](https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world)
