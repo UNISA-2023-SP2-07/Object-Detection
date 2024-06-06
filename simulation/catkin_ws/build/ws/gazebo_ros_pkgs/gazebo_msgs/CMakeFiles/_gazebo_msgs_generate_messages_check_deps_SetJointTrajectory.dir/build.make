@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/truan/Object-Detection/simulation/catkin_ws/build
 include ws/gazebo_ros_pkgs/gazebo_msgs/CMakeFiles/_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory.dir/progress.make
 
 ws/gazebo_ros_pkgs/gazebo_msgs/CMakeFiles/_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory:
-	cd /home/truan/Object-Detection/simulation/catkin_ws/build/ws/gazebo_ros_pkgs/gazebo_msgs && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py gazebo_msgs /home/truan/Object-Detection/simulation/catkin_ws/src/ws/gazebo_ros_pkgs/gazebo_msgs/srv/SetJointTrajectory.srv geometry_msgs/Point:geometry_msgs/Quaternion:trajectory_msgs/JointTrajectoryPoint:std_msgs/Header:geometry_msgs/Pose:trajectory_msgs/JointTrajectory
+	cd /home/truan/Object-Detection/simulation/catkin_ws/build/ws/gazebo_ros_pkgs/gazebo_msgs && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py gazebo_msgs /home/truan/Object-Detection/simulation/catkin_ws/src/ws/gazebo_ros_pkgs/gazebo_msgs/srv/SetJointTrajectory.srv trajectory_msgs/JointTrajectoryPoint:geometry_msgs/Point:geometry_msgs/Pose:trajectory_msgs/JointTrajectory:std_msgs/Header:geometry_msgs/Quaternion
 
 _gazebo_msgs_generate_messages_check_deps_SetJointTrajectory: ws/gazebo_ros_pkgs/gazebo_msgs/CMakeFiles/_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory
 _gazebo_msgs_generate_messages_check_deps_SetJointTrajectory: ws/gazebo_ros_pkgs/gazebo_msgs/CMakeFiles/_gazebo_msgs_generate_messages_check_deps_SetJointTrajectory.dir/build.make

@@ -7,7 +7,7 @@
       <pose>0 0 0 0 0 -1.57079632679</pose>
       <inertial>
         <pose>0 -0.5 0.5 0 0 0</pose>
-        <mass>30</mass>
+        <mass>90</mass>
         <inertia>
           <ixx>0.1</ixx>
           <ixy>0</ixy>
@@ -21,8 +21,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/cart_base_collision.stl</uri>
+            <scale>2 1 1</scale>
+            <uri>meshes/cart_base_collision.stl</uri>
           </mesh>
         </geometry>
         <max_contacts>5</max_contacts>
@@ -48,8 +48,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/cart_base.dae</uri>
+            <scale>2 1 1</scale>
+            <uri>meshes/cart_base.dae</uri>
             <submesh>
               <name>base_metal</name>
               <center>false</center>
@@ -61,8 +61,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/cart_base.dae</uri>
+            <scale>2 1 1</scale>
+            <uri>meshes/cart_base.dae</uri>
             <submesh>
               <name>base_shelf</name>
               <center>false</center>
@@ -74,8 +74,8 @@
         <pose>-0.245 -1.005 0.05 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/sup_wheels.dae</uri>
+            <scale>2 2 2</scale>
+            <uri>meshes/sup_wheels.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -83,8 +83,8 @@
         <pose>0.245 -1.005 0.05 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/sup_wheels.dae</uri>
+            <scale>2 2 2</scale>
+            <uri>meshes/sup_wheels.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -92,8 +92,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/cart_base.dae</uri>
+            <scale>4 4 4</scale>
+            <uri>meshes/cart_base.dae</uri>
             <submesh>
               <name>tag</name>
               <center>false</center>
@@ -105,7 +105,7 @@
           <specular>1.0 1.0 1.0</specular>
           <pbr>
             <metal>
-              <albedo_map>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/cart_tag.png</albedo_map>
+              <albedo_map>meshes/cart_tag.png</albedo_map>
             </metal>
           </pbr>
         </material>
@@ -116,7 +116,7 @@
 
     <!-- Back Left -->
     <link name="back_left">
-      <pose>-1.04 -0.245 -0.05 0 0 1.570796327</pose>
+      <pose>-1.04 -0.49 -0.05 0 0 1.570796327</pose>
       <inertial>
         <pose>0 0 0 0 1.570796327 0</pose>
         <mass>0.01</mass>
@@ -133,8 +133,8 @@
         <pose>0 0 0 0 1.570796327 0</pose>
         <geometry>
           <cylinder>
-            <length>0.2</length>
-            <radius>0.12</radius>
+            <length>0.5</length>
+            <radius>0.5</radius>
           </cylinder>
         </geometry>
         <max_contacts>5</max_contacts>
@@ -160,8 +160,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/wheel.dae</uri>
+            <scale>4 4 4</scale>
+            <uri>meshes/wheel.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -181,7 +181,7 @@
 
     <!-- Back Right -->
     <link name="back_right">
-      <pose>-1.04 0.245 -0.05 0 0 1.570796327</pose>
+      <pose>-1.04 0.49 -0.05 0 0 1.570796327</pose>
       <inertial>
         <pose>0 0 0 0 1.570796327 0</pose>
         <mass>0.01</mass>
@@ -198,8 +198,8 @@
         <pose>0 0 0 0 1.570796327 0</pose>
         <geometry>
           <cylinder>
-            <length>0.2</length>
-            <radius>0.12</radius>
+            <length>0.5</length>
+            <radius>0.5</radius>
           </cylinder>
         </geometry>
         <max_contacts>5</max_contacts>
@@ -225,8 +225,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/wheel.dae</uri>
+            <scale>4 4 4</scale>
+            <uri>meshes/wheel.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -245,44 +245,9 @@
     </joint>
 
     <!-- Front Left -->
-    <link name='wheel_sup_front_left'>
-      <pose>0 -0.245 0.05 0 0 1.570796327</pose>
-      <inertial>
-        <pose>0 0 0 0 0 0</pose>
-        <mass>0.01</mass>
-        <inertia>
-          <ixx>0.0000175</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.0000175</iyy>
-          <iyz>0</iyz>
-          <izz>0.0000175</izz>
-        </inertia>
-      </inertial>
-      <visual name='wheel_sup_front_left_visual'>
-        <pose>0 0 0 0 0 3.14159265359</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/sup_wheels.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-
-    <joint name='wheel_sup_front_left_joint' type='revolute'>
-      <child>wheel_sup_front_left</child>
-      <parent>base_link</parent>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <dynamics>
-          <damping>0.001</damping>
-        </dynamics>
-      </axis>
-    </joint>
 
     <link name="front_left">
-      <pose>-0.04 -0.245 -0.05 0 0 1.570796327</pose>
+      <pose>-0.04 -0.49 -0.05 0 0 1.570796327</pose>
       <inertial>
         <pose>0 0 0 0 1.570796327 0</pose>
         <mass>0.01</mass>
@@ -299,8 +264,8 @@
         <pose>0 0 0 0 1.570796327 0</pose>
         <geometry>
           <cylinder>
-            <length>0.2</length>
-            <radius>0.12</radius>
+            <length>0.5</length>
+            <radius>0.5</radius>
           </cylinder>
         </geometry>
         <max_contacts>5</max_contacts>
@@ -326,8 +291,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/wheel.dae</uri>
+            <scale>4 4 4</scale>
+            <uri>meshes/wheel.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -335,7 +300,7 @@
 
     <joint name="front_left_joint" type="revolute">
       <child>front_left</child>
-      <parent>wheel_sup_front_left</parent>
+      <parent>base_link</parent>
       <axis>
         <xyz>1 0 0</xyz>
         <dynamics>
@@ -346,46 +311,8 @@
     </joint>
 
     <!-- Front Right -->
-
-    <link name='wheel_sup_front_right'>
-      <pose>0 0.245 0.05 0 0 1.570796327</pose>
-      <inertial>
-        <pose>0 0 0 0 0 0</pose>
-        <mass>0.01</mass>
-        <inertia>
-          <ixx>0.0000175</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.0000175</iyy>
-          <iyz>0</iyz>
-          <izz>0.0000175</izz>
-        </inertia>
-      </inertial>
-      <visual name='wheel_sup_front_right_visual'>
-        <pose>0 0 0 0 0 3.14159265359</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/sup_wheels.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-
-    <joint name='wheel_sup_front_right_joint' type='revolute'>
-      <child>wheel_sup_front_right</child>
-      <parent>base_link</parent>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <dynamics>
-          <damping>0.001</damping>
-        </dynamics>
-      </axis>
-    </joint>
-
-
     <link name="front_right">
-      <pose>-0.04 0.245 -0.05 0 0 1.570796327</pose>
+      <pose>-0.04 0.49 -0.05 0 0 1.570796327</pose>
       <inertial>
         <pose>0 0 0 0 1.570796327 0</pose>
         <mass>0.01</mass>
@@ -402,8 +329,8 @@
         <pose>0 0 0 0 1.570796327 0</pose>
         <geometry>
           <cylinder>
-            <length>0.2</length>
-            <radius>0.12</radius>
+            <length>0.5</length>
+            <radius>0.5</radius>
           </cylinder>
         </geometry>
         <max_contacts>5</max_contacts>
@@ -429,8 +356,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2/meshes/wheel.dae</uri>
+            <scale>4 4 4</scale>
+            <uri>meshes/wheel.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -438,7 +365,7 @@
 
     <joint name="front_right_joint" type="revolute">
       <child>front_right</child>
-      <parent>wheel_sup_front_right</parent>
+      <parent>base_link</parent>
       <axis>
         <xyz>1 0 0</xyz>
         <dynamics>
@@ -449,21 +376,23 @@
     </joint>
     <plugin name='ignition::gazebo::systems::DiffDrive' filename='ignition-gazebo-diff-drive-system'>
       <ros>
-        <namespace>/mobile_robot</namespace>
+        <namespace>/mobile_robot_with_arm</namespace>
         <remapping>cmd_vel:=cmd_vel</remapping>
         <remapping>odom:=odom</remapping>
       </ros>
+      <left_joint>front_left_joint</left_joint>
       <left_joint>back_left_joint</left_joint>
       <right_joint>front_right_joint</right_joint>
-      <wheel_separation>0.49</wheel_separation>
-      <wheel_diameter>0.24</wheel_diameter>
-      <max_wheel_torque>20</max_wheel_torque>
-      <max_wheel_acceleration>10</max_wheel_acceleration>
+      <right_joint>back_right_joint</right_joint>
+      <wheel_separation>1.47</wheel_separation>
+      <wheel_diameter>1</wheel_diameter>
+      <max_wheel_torque>5</max_wheel_torque>
+      <max_wheel_acceleration>5</max_wheel_acceleration>
       <publish_odom>1</publish_odom>
       <publish_odom_tf>1</publish_odom_tf>
       <publish_wheel_tf>1</publish_wheel_tf>
       <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>chassis</robot_base_frame>
+      <robot_base_frame>base_link</robot_base_frame>
     </plugin>
   </model>
 </sdf>

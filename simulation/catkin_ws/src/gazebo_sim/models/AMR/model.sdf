@@ -2935,8 +2935,6 @@
         <remapping>odom:=odom</remapping>
       </ros>
       <left_joint>wheel_joint_fl</left_joint>
-      <right_joint>wheel_joint_fr</right_joint>
-      <left_joint>wheel_joint_bl</left_joint>
       <right_joint>wheel_joint_br</right_joint>
       <wheel_separation>0.316</wheel_separation>
       <wheel_diameter>0.1</wheel_diameter>
