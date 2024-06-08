@@ -1,5 +1,8 @@
-# HOW TO RUN A SIMULATION WORKSPACE
+# USER MANUAL - HOW TO RUN A SIMULATION WORKSPACE
 ---
+## Set up the environment:
+The robot integration will be run via Robot Operation System (ROS) which is only supported the best in a Linux environment. Therefore, to be able to run the simulation, we will need to set up the Linux and ROS integrated environment for the best experience. The 
+
 ## Source the package before running:
 *(Run on terminal before every launch)*
 
