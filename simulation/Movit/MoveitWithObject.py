@@ -6,19 +6,24 @@ from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
 
+# intialise ros node for the move group
+# allow move the joints of robot arm
 moveit_commander.roscpp_initialize(sys.argv)
 rospy.init_node('move_group_python_interface', anonymous=True)
 
+# create scence and robot
 scene = moveit_commander.PlanningSceneInterface()
 robot = moveit_commander.RobotCommander()
 
 group_name = "arm_group"
 group = moveit_commander.MoveGroupCommander(group_name)
 
+# publish the topic type message display trajectory
 display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path',
                                                moveit_msgs.msg.DisplayTrajectory,
                                                queue_size=20)
 
+# create new pose for robot
 def createPose(x, y, z):
     p = PoseStamped()
     p.header.frame_id = robot.get_planning_frame()
@@ -27,6 +32,7 @@ def createPose(x, y, z):
     p.pose.position.z = z
     return p
 
+# add object to the scene
 scene.add_box("table", createPose(.25, 0, .05), (.25, 1.5, 0.1))
 
 scene.add_cylinder("pipette", createPose(0, .25, .15), 0.1, 0.05)
@@ -39,27 +45,27 @@ joint_goal[3] = 0
 joint_goal[4] = pi/2
 joint_goal[5] = 0
 
-# The go command can be called with joint values, poses, or without any
+# go command can be called with joint values, poses, or without any
 # parameters if you have already set the pose or joint target for the group
 group.go(joint_goal, wait=True)
 
-# Calling ``stop()`` ensures that there is no residual movement
+# calling ``stop()`` ensures that there is no residual movement
 group.stop()
 
-# pose_goal = Pose()
-# pose_goal.orientation.w = 1.0
-# pose_goal.position.x = 0
-# pose_goal.position.y = 0.25
-# pose_goal.position.z = 0.15
-# group.set_pose_target(pose_goal)
+pose_goal = Pose()
+pose_goal.orientation.w = 1.0
+pose_goal.position.x = 0
+pose_goal.position.y = 0.25
+pose_goal.position.z = 0.15
+group.set_pose_target(pose_goal)
 
-# plan = group.go(wait=True)
-# # Calling `stop()` ensures that there is no residual movement
-# group.stop()
-# # It is always good to clear your targets after planning with poses.
-# # Note: there is no equivalent functison for clear_joint_value_targets()
+plan = group.go(wait=True)
+# calling `stop()` ensures that there is no residual movement
+group.stop()
+# It is always good to clear your targets after planning with poses.
+# Note: there is no equivalent functison for clear_joint_value_targets()
 
-# # group.clear_pose_targets()
+# group.clear_pose_targets()
 
 planning_frame = group.get_planning_frame()
 print("============ Reference frame: %s" % planning_frame)

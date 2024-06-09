@@ -35,8 +35,8 @@ def main():
 
     # Get path to the robot
     sdf_file_path = os.path.join(
-        get_package_share_directory("warehouse_robot_spawner_pkg"), "models",
-        "mobile_warehouse_robot", "model.sdf")
+        get_package_share_directory("gazebo_sim"), "models",
+        "model_robot_with_arm", "model.sdf")
 
     # Show file path
     print(f"robot_sdf={sdf_file_path}")

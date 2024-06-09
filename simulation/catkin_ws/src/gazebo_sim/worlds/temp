@@ -1,0 +1,35 @@
+    <include>
+      <uri>
+        model://RAH_lab
+      </uri>
+      <name>RAH_lab<name/>
+      <pose>1.41433 -1.46412 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>
+        model://AMR
+      </uri>
+      <name>AMR_0<name/>
+      <pose>9.7754 -0.621706 0.09 0 -0 0</pose>
+    </include>   
+    <include>
+      <uri>
+        model://AMR
+      </uri>
+      <name>AMR_1<name/>
+      <pose>1.42904 0.445291 0.09 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>
+        model://AMR
+      </uri>
+      <name>AMR_2<name/>
+      <pose>-6.60336 3.14409 0.09 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>
+        model://AMR
+      </uri>
+      <name>AMR_3<name/>
+      <pose>11.9717 -6.52011 0 0 -0 0</pose>
+    </include>

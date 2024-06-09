@@ -3,8 +3,13 @@
     <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
 
+    <!--Include path to models-->
     <env name="GAZEBO_MODEL_PATH" value="$(find gazebo_sim)/models"/>
     
+    <!--Create new world as the base world (default).
+        Set up customed world to show.
+        Open the world in Gazebo editor.
+    -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(find gazebo_sim)/worlds/robot_arm_world.sdf"/>
         <arg name="paused" value="false"/>

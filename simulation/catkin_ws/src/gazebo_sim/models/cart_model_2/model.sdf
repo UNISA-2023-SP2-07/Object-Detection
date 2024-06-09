@@ -374,6 +374,8 @@
         </dynamics>
       </axis>
     </joint>
+
+    <!--Allow user to control the wheel and publish the control message to the user controller interface-->
     <plugin name='ignition::gazebo::systems::DiffDrive' filename='ignition-gazebo-diff-drive-system'>
       <ros>
         <namespace>/mobile_robot_with_arm</namespace>

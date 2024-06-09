@@ -1,5 +1,6 @@
 int main(int argc, char* argv[])
 {
+    // check robot connectivity
     try {
     QCoreApplication a(argc, argv);
     using namespace std::chrono_literals;
@@ -38,6 +39,7 @@ int main(int argc, char* argv[])
         mycobot::MyCobot::I().SleepSecond(1);
     }*/
 
+    // set gripper for 2 finger in hand
     for (int i = 0; i < 2; i++) {
         mycobot::MyCobot::I().SetGriper(1);
         mycobot::MyCobot::I().SleepSecond(3);

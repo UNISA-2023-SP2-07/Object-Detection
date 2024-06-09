@@ -1,4 +1,5 @@
 <sdf version='1.7'>
+    <!--Create robot arm with mobile base. Connect other customed models (arm and base) to create one.-->
     <model name="mobile_robot_with_arm">
         <pose>-1.5 -0.3675 3.1 0 -0 0</pose>
         <include>
@@ -16,6 +17,7 @@
             <name>robot_base</name>
         </include>
 
+        <!--Add laser link-->
         <link name='laser_link'>
             <inertial>
                 <mass>0.1</mass>
@@ -111,6 +113,8 @@
             <enable_wind>0</enable_wind>
             <kinematic>0</kinematic>
         </link>
+
+        <!--Add camera-->
         <link name="rgbd_camera_link">
             <pose relative_to="robot_arm::panda_link0">0 0 0 0 0 0</pose>
             <inertial>
@@ -153,6 +157,8 @@
                 <topic>rgbd_camera</topic>
             </sensor>
         </link>
+
+        <!--Connect arm and base-->
         <joint name="shoulder_joint" type="fixed">
             <parent>robot_base::base_link</parent>
             <child>robot_arm::panda_link0</child>
@@ -160,6 +166,8 @@
                 <xyz>0 0 1</xyz>
             </axis> 
         </joint>
+        
+        <!--Attach laser and camera-->
         <joint name='laser_joint' type='fixed'>
             <child>laser_link</child>
             <parent>robot_base::base_link</parent>

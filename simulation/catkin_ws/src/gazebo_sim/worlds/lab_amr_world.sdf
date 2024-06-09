@@ -36,6 +36,11 @@
     </light>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
+    
+    <!--Display images from the camera mounted on top of the robot arm. 
+    Move robot joints: Get the data from user input and publish it to the topic to listen to.
+    Move robot base (wheels): Get the data from user input and publish it to the topic to listen to.
+    -->
     <gui fullscreen='0'>
       <plugin name='3D View' filename='GzScene3D'>
         <ignition-gui>

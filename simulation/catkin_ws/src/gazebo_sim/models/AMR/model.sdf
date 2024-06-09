@@ -2928,25 +2928,27 @@
 		<static>
 			0
 		</static>
-    <plugin name='ignition::gazebo::systems::DiffDrive' filename='ignition-gazebo-diff-drive-system'>
-      <ros>
-        <namespace>/AMR</namespace>
-        <remapping>cmd_vel:=cmd_vel</remapping>
-        <remapping>odom:=odom</remapping>
-      </ros>
-      <left_joint>wheel_joint_fl</left_joint>
-      <right_joint>wheel_joint_br</right_joint>
-      <wheel_separation>0.316</wheel_separation>
-      <wheel_diameter>0.1</wheel_diameter>
-      <max_wheel_torque>50</max_wheel_torque>
-      <max_wheel_acceleration>50</max_wheel_acceleration>
-      <publish_odom>1</publish_odom>
-      <publish_odom_tf>1</publish_odom_tf>
-      <publish_wheel_tf>1</publish_wheel_tf>
-      <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>base_link</robot_base_frame>
-    </plugin>
-    <!--<plugin name="ignition::gazebo::systems::SkidSteerDriveController" filename="ignition-gazebo-ros-skid-steer-drive-system">
+    
+		<!--Allow control robot with 2 wheels-->
+		<plugin name='ignition::gazebo::systems::DiffDrive' filename='ignition-gazebo-diff-drive-system'>
+			<ros>
+				<namespace>/AMR</namespace>
+				<remapping>cmd_vel:=cmd_vel</remapping>
+				<remapping>odom:=odom</remapping>
+			</ros>
+			<left_joint>wheel_joint_fl</left_joint>
+			<right_joint>wheel_joint_br</right_joint>
+			<wheel_separation>0.316</wheel_separation>
+			<wheel_diameter>0.1</wheel_diameter>
+			<max_wheel_torque>50</max_wheel_torque>
+			<max_wheel_acceleration>50</max_wheel_acceleration>
+			<publish_odom>1</publish_odom>
+			<publish_odom_tf>1</publish_odom_tf>
+			<publish_wheel_tf>1</publish_wheel_tf>
+			<odometry_frame>odom</odometry_frame>
+			<robot_base_frame>base_link</robot_base_frame>
+		</plugin>
+    	<!--<plugin name="ignition::gazebo::systems::SkidSteerDriveController" filename="ignition-gazebo-ros-skid-steer-drive-system">
 			<updateRate>
 				100.0
 			</updateRate>
@@ -2996,6 +2998,8 @@
 				0.01
 			</covariance_yaw>
 		</plugin> -->
+
+		<!--Allow control joints in robot arm-->
 		<plugin name="ignition::gazebo::systems::JointController" filename="ignition-gazebo-joint-controller-system">
 			<joint_name>
 				gripper_palm_joint
@@ -3024,7 +3028,9 @@
 				0.01
 			</i_gain>
 		</plugin>
-    <plugin name="ignition::gazebo::systems::JointController" filename="ignition-gazebo-joint-controller-system">
+    
+	
+		<plugin name="ignition::gazebo::systems::JointController" filename="ignition-gazebo-joint-controller-system">
 			<joint_name>
 				gripper_finger_joint_r
 			</joint_name>
