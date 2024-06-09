@@ -1,7 +1,13 @@
 # USER MANUAL - HOW TO RUN A SIMULATION WORKSPACE
 ---
-## Set up the environment:
+## SET UP THE ENVIRONMENT
 The robot integration will be run via Robot Operation System (ROS) which is only supported the best in a Linux environment. Therefore, to be able to run the simulation, we will need to set up the Linux and ROS integrated environment for the best experience.
+
+In this set up, we will use:
+
+* Unbuntu 22.04
+* ROS Noetic
+* Gazebo Citadel
 
 ### Set up Linux 
 [Install Ubuntu 22.04 LTS](https://releases.ubuntu.com/jammy/)
@@ -18,7 +24,9 @@ git clone -b ros-robot-coordination <remote-repo-url>
 cd Object-Detection
 git sparse-checkout set simulation
 ```
-## Source the packages and plugins lib before running:
+
+## RUN THE ROBOT SIMULATION
+### Source the packages and plugins lib before running
 The system needs to be notified about the existence of the packages to be able to connect to the ROS environment. 
 
 ***REQUIRED**: Run on the terminal before every launch*
@@ -35,7 +43,7 @@ Sometimes the system does not recognise whether the environment has been set up 
 
 `rospack find gazebo_sim`
 
-## Start the simulation:
+### Start the simulation
 1. Start roslaunch for gazebo editor:
    
    `roslaunch gazebo_sim {NAME-OF-LAUNCH-FILE.launch}`
@@ -61,12 +69,16 @@ Sometimes the system does not recognise whether the environment has been set up 
    
    `ign topic -e -t /world/{WORLD-NAME}/stats`
    
-## Build single package
+## BUILD THE ROS PACKAGE
+Build the single package
 
 `catkin_make --only-pkg-with-deps gazebo_sim`
 
 `catkin_make -DCATKIN_WHITELIST_PACKAGES=""` to build all at the end
 
+Build the whole catkin workspace
+
+`catkin_make`
 ## DEBUGGING
 No public key for`W:GPG error: http://packages.ros.org/ros2/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY `:
 
@@ -138,3 +150,5 @@ ROBOFLOW_KEY=D1r3hyiOBsbn1cCkuDwdv ./infer.sh pipettes-detection/11 IMG_3203.mov
 ```
 ## RESOURCES
 [Create world in Gazebo](https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world)
+
+[Connect computer vision to project logic](https://roboflow.com/templates)
