@@ -1,0 +1,25 @@
+ <launch>
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <!--Include path to models-->
+    <env name="GAZEBO_MODEL_PATH" value="$(find gazebo_sim)/models"/>
+    
+    <!--Create new world as the base world (default).
+        Set up customed world to show.
+        Open the world in Gazebo editor.
+    -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find gazebo_sim)/worlds/world_with_obstacles.sdf"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+        <arg name="extra_gazebo_args" default='--verbose'/>
+    </include>
+
+    <!-- <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-sdf -unpause -param robot_description -model robot -z 0.0 -J elbow_joint -1.57" respawn="false" output="screen" /> -->
+    <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" ns="/AMR" args="joint_state_controller diff_drive_controller"/> -->
+</launch>

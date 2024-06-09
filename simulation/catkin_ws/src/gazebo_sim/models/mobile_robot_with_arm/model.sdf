@@ -1,0 +1,180 @@
+<sdf version='1.7'>
+    <!--Create robot arm with mobile base. Connect other customed models (arm and base) to create one.-->
+    <model name="mobile_robot_with_arm">
+        <pose>-1.5 -0.3675 3.1 0 -0 0</pose>
+        <include>
+            <uri>
+                file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/panda_orange
+            </uri>           
+            <name>robot_arm</name>           
+        </include>
+
+        <include>
+            <uri>
+                file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/cart_model_2
+            </uri>
+            <pose>0 0 0 0 -0 0</pose>
+            <name>robot_base</name>
+        </include>
+
+        <!--Add laser link-->
+        <link name='laser_link'>
+            <inertial>
+                <mass>0.1</mass>
+                <pose>0 0 0 0 -0 0</pose>
+                <inertia>
+                    <ixx>1</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1</iyy>
+                    <iyz>0</iyz>
+                    <izz>1</izz>
+                </inertia>
+            </inertial>
+            <pose relative_to="robot_base::base_link">0 0 0 0 0 0</pose>
+            <visual name='visual'>
+                <geometry>
+                    <mesh>
+                    <uri>file:///home/truan/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models/hokuyo/meshes/hokuyo.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name='collision-base'>
+                <pose>0 0 -0.0145 0 -0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.05 0.05 0.041</size>
+                    </box>
+                </geometry>
+                <max_contacts>10</max_contacts>
+                <surface>
+                    <contact>
+                    <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                    <torsional>
+                        <ode/>
+                    </torsional>
+                    <ode/>
+                    </friction>
+                </surface>
+            </collision>
+            <collision name='collision-top'>
+                <pose>0 0 0.0205 0 -0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.021</radius>
+                        <length>0.029</length>
+                    </cylinder>
+                </geometry>
+                <max_contacts>10</max_contacts>
+                <surface>
+                    <contact>
+                    <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                    <torsional>
+                        <ode/>
+                    </torsional>
+                    <ode/>
+                    </friction>
+                </surface>
+            </collision>
+            <sensor name='imu' type='imu'>
+                <pose>0.01 0 0.0175 0 -0 0</pose>
+                <ray>
+                    <scan>
+                    <horizontal>
+                        <samples>181</samples>
+                        <resolution>1</resolution>
+                        <min_angle>-1.5708</min_angle>
+                        <max_angle>1.5708</max_angle>
+                    </horizontal>
+                    <vertical>
+                        <samples>1</samples>
+                        <min_angle>0</min_angle>
+                        <max_angle>0</max_angle>
+                    </vertical>
+                    </scan>
+                    <range>
+                    <min>0.08</min>
+                    <max>10</max>
+                    <resolution>0.05</resolution>
+                    </range>
+                </ray>
+                <always_on>1</always_on>
+                <update_rate>100</update_rate>
+                <visualize>1</visualize>
+                <topic>imu</topic>
+            </sensor>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+        </link>
+
+        <!--Add camera-->
+        <link name="rgbd_camera_link">
+            <pose relative_to="robot_arm::panda_link0">0 0 0 0 0 0</pose>
+            <inertial>
+                <mass>0.1</mass>
+                <inertia>
+                    <ixx>0.000166667</ixx>
+                    <iyy>0.000166667</iyy>
+                    <izz>0.000166667</izz>
+                </inertia>
+            </inertial>
+            <collision name="collision">
+                <geometry>
+                    <box>
+                    <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                    <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+            </visual>
+            <sensor name="rgbd_camera" type="rgbd_camera">
+                <camera>
+                    <horizontal_fov>1.047</horizontal_fov>
+                    <image>
+                    <width>320</width>
+                    <height>240</height>
+                    </image>
+                    <clip>
+                    <near>0.1</near>
+                    <far>100</far>
+                    </clip>
+                </camera>
+                <always_on>1</always_on>
+                <update_rate>30</update_rate>
+                <visualize>true</visualize>
+                <topic>rgbd_camera</topic>
+            </sensor>
+        </link>
+
+        <!--Connect arm and base-->
+        <joint name="shoulder_joint" type="fixed">
+            <parent>robot_base::base_link</parent>
+            <child>robot_arm::panda_link0</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+            </axis> 
+        </joint>
+        
+        <!--Attach laser and camera-->
+        <joint name='laser_joint' type='fixed'>
+            <child>laser_link</child>
+            <parent>robot_base::base_link</parent>
+        </joint>
+        <joint name='camera_joint' type='fixed'>
+            <child>rgbd_camera_link</child>
+            <parent>robot_arm::panda_link0</parent>
+        </joint>
+    </model>
+</sdf>

@@ -1,0 +1,8 @@
+prefix=/home/truan/Object-Detection/simulation/catkin_ws/devel
+
+Name: ros_ign_bridge
+Description: Description of ros_ign_bridge
+Version: 0.111.2
+Cflags: -I/home/truan/Object-Detection/simulation/catkin_ws/src/ws/ros_ign/ros_ign_bridge/include
+Libs: -L${prefix}/lib -lros_ign_bridge_lib
+Requires: 
