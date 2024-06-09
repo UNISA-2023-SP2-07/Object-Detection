@@ -5,12 +5,12 @@ The robot integration will be run via Robot Operation System (ROS) which is only
 
 In this set up, we will use:
 
-* Unbuntu 22.04
+* Unbuntu 20.04
 * ROS Noetic
 * Gazebo Citadel
 
 ### Set up Linux 
-[Install Ubuntu 22.04 LTS](https://releases.ubuntu.com/jammy/)
+[Install Ubuntu 20.04 LTS](https://releases.ubuntu.com/jammy/)
 
 ### Set up ROS
 [Install ROS Noetic](http://wiki.ros.org/Installation/Ubuntu)
