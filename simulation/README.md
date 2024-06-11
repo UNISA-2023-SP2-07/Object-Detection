@@ -34,7 +34,8 @@ The system needs to be notified about the existence of the packages to be able t
 ```
 source /opt/ros/noetic/setup.bash # source ros environment
 source ~/Object-Detection/simulation/catkin_ws/devel/setup.bash # source simulation package
-source /usr/share/gazebo-11/setup.sh # source gazebo plugin packages 
+source /usr/share/gazebo-11/setup.sh # source gazebo plugin packages
+export GAZEBO_MODEL_PATH=~/Object-Detection/simulation/catkin_ws/src/gazebo_sim/models:$GAZEBO_MODEL_PATH
 ```
 
 **DEBUG** 
