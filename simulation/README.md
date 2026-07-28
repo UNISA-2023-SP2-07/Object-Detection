@@ -149,7 +149,20 @@ pred
 ```
 ROBOFLOW_KEY=D1r3hyiOBsbn1cCkuDwdv ./infer.sh pipettes-detection/11 IMG_3203.mov fish.gif --fps_in 3 --fps_out 12 --scale 4
 ```
+
+<img width="753" height="580" alt="mobile_robot_arm" src="https://github.com/user-attachments/assets/ba4a3595-e53d-437d-95ea-c65ceadd3824" />
+
+<img width="1047" height="657" alt="robot_arm_cobot" src="https://github.com/user-attachments/assets/6880c662-9447-4b43-be4e-2910ce73f72d" />
+
+<img width="653" height="553" alt="mycobot_arm_rviz" src="https://github.com/user-attachments/assets/f5d4ba2b-f0d9-4fbb-a0f0-ff7383f1b65d" />
+
+<img width="2048" height="947" alt="lab_design_flat" src="https://github.com/user-attachments/assets/e83e4332-d52b-4c34-8935-57e4fed81550" />
+
+
+
+
 ## RESOURCES
 [Create world in Gazebo](https://campus-rover.gitbook.io/lab-notebook/fiiva/create-gazebo.world)
 
 [Connect computer vision to project logic](https://roboflow.com/templates)
+
